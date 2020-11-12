@@ -51,6 +51,7 @@ class Directory extends React.Component {
     return (
       <div className='directory-menu'>
         {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          // using ...otherSectionProps allowed removing of: title={title} imageUrl={imageUrl} size={size} which was verbose and repetitious
           <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
